@@ -1,5 +1,5 @@
 // Replace with your Render backend URL
-const socket = io("https://YOUR_RENDER_URL");
+const socket = io("https://loginpageserver.onrender.com");
 
 const form = document.getElementById('form');
 const input = document.getElementById('input');
