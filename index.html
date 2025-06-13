@@ -1,23 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Chat App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watch Our Video!</title>
   <style>
-    body { font-family: sans-serif; }
-    #messages { list-style: none; height: 300px; overflow-y: scroll; padding: 0; }
-    #form { display: flex; }
-    #input { flex: 1; padding: 10px; }
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .title {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .description {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .button {
+      background: #e62117;
+      color: #fff;
+      padding: 12px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background: #cc1c13;
+    }
   </style>
 </head>
 <body>
-  <ul id="messages"></ul>
-  <form id="form">
-    <input id="input" autocomplete="off" /><button>Send</button>
-  </form>
+  <div class="container">
+    <div class="title">🎥 Watch Our Awesome Video</div>
+    <div class="description">Click play below — your view helps us grow on YouTube!</div>
+    <div class="video-wrapper">
+      <iframe id="ytplayer" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <button class="button" onclick="playVideo()">Play Now</button>
+  </div>
 
-  <!-- Replace 'YOUR_RENDER_URL' after deploying backend -->
-  <script src="https://loginpageserver.onrender.com"></script>
-  <script src="script.js"></script>
+  <script>
+    let player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('ytplayer');
+    }
+
+    function playVideo() {
+      if (player) {
+        player.playVideo();
+      }
+    }
+
+    // Load YouTube IFrame API
+    let tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+  </script>
 </body>
 </html>
