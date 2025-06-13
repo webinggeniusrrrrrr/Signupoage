@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Watch All Our Videos!</title>
+  <title>Watch & Support Our Video!</title>
   <style>
     body {
       margin: 0;
@@ -13,30 +13,29 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px;
+      padding: 10px;
     }
     .title {
       font-size: 2em;
-      margin-bottom: 10px;
+      margin: 10px 0;
     }
     .description {
-      font-size: 1.2em;
-      margin-bottom: 20px;
+      font-size: 1em;
       color: #ccc;
       text-align: center;
+      margin-bottom: 20px;
     }
     .videos {
       display: grid;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 10px;
+      width: 100%;
+      max-width: 1200px;
     }
     .video-wrapper {
       position: relative;
-      padding-bottom: 56.25%;
+      padding-bottom: 56.25%; /* 16:9 */
       height: 0;
-      width: 300px;
     }
     .video-wrapper iframe {
       position: absolute;
@@ -49,12 +48,12 @@
     .button {
       background: #e62117;
       color: #fff;
-      padding: 12px 25px;
+      padding: 10px 20px;
       font-size: 1em;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      margin: 20px 0;
     }
     .button:hover {
       background: #cc1c13;
@@ -62,440 +61,66 @@
   </style>
 </head>
 <body>
-  <div class="title">🎬 Watch Our Videos</div>
-  <div class="description">Click the button below to play all videos — your views help our channel grow!</div>
+  <div class="title">🎬 Watch & Support</div>
+  <div class="description">Click Play All to support us — every view helps our channel!</div>
 
-  <div class="videos">
-    <div class="video-wrapper">
-      <iframe id="player1" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-    <div class="video-wrapper">
-      <iframe id="player2" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-    <div class="video-wrapper">
-      <iframe id="player3" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-        <div class="video-wrapper">
-      <iframe id="player4" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player5" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player6" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player7" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player8" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player9" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player10" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player11" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-             <div class="video-wrapper">
-      <iframe id="player13" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player16" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player17" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player18" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player19" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player20" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player21" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player22" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-             <div class="video-wrapper">
-      <iframe id="player23" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player24" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player25" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player26" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player27" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player28" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player29" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player30" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-             <div class="video-wrapper">
-      <iframe id="player31" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player32" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player33" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player34" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player35" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player36" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player37" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player38" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-             <div class="video-wrapper">
-      <iframe id="player39" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player40" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player41" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player42" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player43" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player44" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player45" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-      <iframe id="player46" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-    
-    <!-- Add more video wrappers as needed -->
+  <div class="videos" id="videos-container">
+    <!-- Video iframes will be generated here by JS -->
   </div>
 
   <button class="button" onclick="playAllVideos()">Play All Videos</button>
 
   <script>
-    let players = {};
+    const VIDEO_ID = "EPvcZGwJw78";
+    const NUM_VIDEOS = 30;
+    const players = {};
+
+    // Generate iframe containers
+    const container = document.getElementById("videos-container");
+    for (let i = 1; i <= NUM_VIDEOS; i++) {
+      const wrapper = document.createElement("div");
+      wrapper.className = "video-wrapper";
+      wrapper.innerHTML = `<iframe id="player${i}" src="https://www.youtube.com/embed/${VIDEO_ID}?enablejsapi=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+      container.appendChild(wrapper);
+    }
 
     function onYouTubeIframeAPIReady() {
-      players.player1 = new YT.Player('player1', {
-        events: {
-          'onStateChange': (event) => handleStateChange(event, 'player1')
-        }
-      });
-      players.player2 = new YT.Player('player2', {
-        events: {
-          'onStateChange': (event) => handleStateChange(event, 'player2')
-        }
-      });
-      players.player1 = new YT.Player('player3', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player4', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player5', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player6', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player7', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player8', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player9', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player10', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player11', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player12', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player13', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player14', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player15', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player16', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player17', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player18', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player19', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player20', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player21', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player22', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player23', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player24', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player25', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player26', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player27', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player28', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player29', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player30', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player31', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player32', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player33', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player34', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player35', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player36', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player37', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player38', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player39', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player40', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player41', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player42', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player43', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player44', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-players.player1 = new YT.Player('player45', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player1')
-  }
-});
-players.player2 = new YT.Player('player46', {
-  events: {
-    'onStateChange': (event) => handleStateChange(event, 'player2')
-  }
-});
-      // Add more players if you add more videos
+      for (let i = 1; i <= NUM_VIDEOS; i++) {
+        players[`player${i}`] = new YT.Player(`player${i}`, {
+          events: {
+            'onStateChange': (event) => handleStateChange(event, `player${i}`)
+          }
+        });
+      }
     }
 
     function playAllVideos() {
       for (let key in players) {
         players[key].playVideo();
+        monitorPlayback(players[key], key);
       }
+    }
+
+    function monitorPlayback(player, playerId) {
+      let interval = setInterval(() => {
+        const time = player.getCurrentTime();
+        if (time >= 60) {  // After 1 minute
+          player.seekTo(0);
+          player.playVideo();
+        }
+      }, 5000);  // Check every 5 seconds
+      player.monitorInterval = interval;
     }
 
     function handleStateChange(event, playerId) {
       if (event.data === YT.PlayerState.ENDED) {
-        // Replay the video
+        // Just in case the video ends before 1 minute, restart
         players[playerId].seekTo(0);
         players[playerId].playVideo();
       }
     }
 
-    // Load YouTube IFrame API
+    // Load YouTube API
     let tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     document.body.appendChild(tag);
