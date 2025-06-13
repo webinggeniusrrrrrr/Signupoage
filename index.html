@@ -3,22 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Watch Our Video!</title>
+  <title>Watch All Our Videos!</title>
   <style>
     body {
       margin: 0;
       background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      color: #fff;
-      font-family: Arial, sans-serif;
-    }
-    .container {
-      text-align: center;
-      max-width: 800px;
       padding: 20px;
     }
     .title {
@@ -29,12 +23,20 @@
       font-size: 1.2em;
       margin-bottom: 20px;
       color: #ccc;
+      text-align: center;
+    }
+    .videos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
     }
     .video-wrapper {
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 */
-      padding-top: 25px;
+      padding-bottom: 56.25%;
       height: 0;
+      width: 300px;
     }
     .video-wrapper iframe {
       position: absolute;
@@ -52,7 +54,6 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      margin-top: 15px;
       transition: background 0.3s ease;
     }
     .button:hover {
@@ -61,25 +62,88 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="title">🎥 Watch Our Awesome Video</div>
-    <div class="description">Click play below — your view helps us grow on YouTube!</div>
+  <div class="title">🎬 Watch Our Videos</div>
+  <div class="description">Click the button below to play all videos — your views help our channel grow!</div>
+
+  <div class="videos">
     <div class="video-wrapper">
-      <iframe id="ytplayer" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
+      <iframe id="player1" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
         allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-    <button class="button" onclick="playVideo()">Play Now</button>
+    <div class="video-wrapper">
+      <iframe id="player2" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <div class="video-wrapper">
+      <iframe id="player2" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+        <div class="video-wrapper">
+      <iframe id="player2" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+      <iframe id="player2" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+      <iframe id="player2" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+      <iframe id="player2" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+      <iframe id="player2" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+      <iframe id="player2" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+      <iframe id="player2" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="video-wrapper">
+      <iframe id="player2" src="https://www.youtube.com/embed/EPvcZGwJw78?enablejsapi=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    
+    <!-- Add more video wrappers as needed -->
   </div>
 
+  <button class="button" onclick="playAllVideos()">Play All Videos</button>
+
   <script>
-    let player;
+    let players = {};
+
     function onYouTubeIframeAPIReady() {
-      player = new YT.Player('ytplayer');
+      players.player1 = new YT.Player('player1', {
+        events: {
+          'onStateChange': (event) => handleStateChange(event, 'player1')
+        }
+      });
+      players.player2 = new YT.Player('player2', {
+        events: {
+          'onStateChange': (event) => handleStateChange(event, 'player2')
+        }
+      });
+      // Add more players if you add more videos
     }
 
-    function playVideo() {
-      if (player) {
-        player.playVideo();
+    function playAllVideos() {
+      for (let key in players) {
+        players[key].playVideo();
+      }
+    }
+
+    function handleStateChange(event, playerId) {
+      if (event.data === YT.PlayerState.ENDED) {
+        // Replay the video
+        players[playerId].seekTo(0);
+        players[playerId].playVideo();
       }
     }
 
